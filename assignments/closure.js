@@ -4,26 +4,27 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 function state(stateName) {
-	const lang1 = 'Arabic';
-	const lang2 = 'Hebrew';
-	console.log(`${stateName} is now known as Israel after 1948. It's most spoken languages are ${lang1} and ${lang2}`);
-	debugger;
-	function city(cityName) {
-		const food = 'stuffed grape leaves';
-		console.log(cityName);
-		debugger;
-		function cityTwo(cityName2) {
-			console.log(
-				`${cityName2} is the capital city of ${stateName} and its offical languages are ${lang1} ${lang2} the national food is ${food}`,
-			);
-			debugger;
-		}
-		city('Haifa');
-	}
-	cityTwo('Tel-Aviv');
-}
-state('Palestine');
+	function stateTwo(stateTwoName) {
+		const lang1 = 'Arabic';
+		const lang2 = 'Hebrew';
+		console.log(
+			`${stateName} is now known as ${stateTwoName} after 1948. It's most spoken languages are ${lang1} and ${lang2}`,
+		);
 
+		function city(cityName) {
+			const food = 'stuffed grape leaves';
+			console.log(cityName);
+
+			console.log(
+				`${cityName} is the capital city of ${stateName} and its offical language is ${lang2} and the national food is ${food}`,
+			);
+
+			city('Haifa');
+		}
+		stateTwo('Israel');
+	}
+	state('Palestine');
+}
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
 // ==== Challenge 2: Implement a "counter maker" function ====

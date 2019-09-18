@@ -58,19 +58,27 @@ function sumNums(x, y, cb) {
 	// sumNums adds two numbers (x, y) and passes the result to the callback.
 	return cb(x + y);
 }
-const add = (x, y) => {
-	return x + y;
-};
-console.log(add(1, 3));
+// const add = (x, y) => {
+// 	return x + y;
+// };
+sumNums(1, 3, function(add) {
+	console.log(add);
+});
+
+// console.log(sumNums(4, 4, add))
 
 function multiplyNums(x, y, cb) {
 	// multiplyNums multiplies two numbers and passes the result to the callback.
 	return cb(x * y);
 }
-const multiply = (x, y) => {
-	return x * y;
-};
-console.log(multiply(3, 4));
+// const multiply = (x, y) => {
+// 	return x * y;
+// };
+// console.log(multiply(3, 4));
+// console.log(multiplyNums(6, 4, multiply));
+multiplyNums(5, 7, function(multiply) {
+	console.log(multiply);
+});
 
 function contains(item, list, cb) {
 	// contains checks if an item is present inside of the given array/list.
